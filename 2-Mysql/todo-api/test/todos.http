@@ -1,0 +1,27 @@
+@baseURL = http://localhost:3000
+
+### 获取所有待办
+GET {{baseURL}}/todos
+
+### 获取单个待办
+GET {{baseURL}}/todos/1
+
+### 新增待办
+POST {{baseURL}}/todos
+Content-Type: application/json
+
+{
+  "content": "test"
+}
+
+### 修改待办
+PUT {{baseURL}}/todos/1
+Content-Type: application/json
+
+{
+  "content": "test-new",
+  "completed": 1
+}
+
+### 删除待办
+DELETE {{baseURL}}/todos/4

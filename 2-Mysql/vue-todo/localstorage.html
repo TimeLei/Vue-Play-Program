@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+<body>
+    <script>
+        // localStorage.setItem(key,value)
+
+
+
+        localStorage.setItem('name','xiaomin')
+
+        // 对于对象类型的数据保存到localstorage--需要通过JSON.stringify转换为JSON格式的字符串载保存
+        const obj = { name:'xiaoming',age:20}
+        localStorage.setItem('obj',JSON.stringify(obj))
+
+        // 传入key--返回value
+        const str = localStorage.getItem('obj')
+        console.log(str,JSON.parse(str));
+
+        // 若访问不存在的key--返回null
+        console.log();
+
+
+
+    </script>
+</body>
+</html>
